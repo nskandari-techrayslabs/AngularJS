@@ -79,9 +79,9 @@
     <div ng-app="myApp" ng-controller="myCtrl">
         
         <form ng-app="" name="myForm">
-            Name : <input ng-model="name"><br><br>
+            Name : <input ng-model="name" required><br><br>
             Email:
-            <input type="email" name="myAddress" ng-model="text">
+            <input type="email" name="myAddress" ng-model="text" required>
             <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
             <h3>Status</h3>
             {{myForm.myAddress.$valid}}
