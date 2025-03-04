@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Example</title>
+    <!-- Include AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Link the JS file -->
+    <script src="Ang-JS/services.js"></script>
+    <!-- Link the CSS file (relative path) -->
+    <link rel="stylesheet" href="Css/expression.css">
+</head>
+<body >
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <p>The Url of this page is : </p>
+        <p>{{myUrl}}</p>
+        <p>{{myHeader}}</p>
+    </div> -->
+    <!-- <div ng-app="myApp" ng-controller="myCtrl"> 
+
+        <p>The time is:</p>
+        
+        <h1>{{theTime}}</h1>
+        
+        </div>
+        
+        <p>The $interval service runs a function every specified millisecond.</p> -->
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+
+        <select ng-model="selectedName" ng-options="x for x in names">
+        </select> -->
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <p>Select a car:</p>
+                
+        <!-- <select ng-model="selectedCar"> -->
+        <!-- <option ng-repeat="x in cars" value="{{x.model}}">{{x.model}}</option> -->
+        <!-- </select> -->
+        <select ng-model="selectedCar" ng-options="x for (x, y) in cars">
+        </select>
+                
+        <h1>You selected: {{selectedCar}}</h1>
+                
+    </div>
+</body>
+</html>

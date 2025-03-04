@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Link the JS file -->
+    <script src="Ang-JS/events.js"></script>
+    <style>
+        input.ng-invalid{
+            background-color:pink;
+        }
+        input.ng-valid{
+            background-color:lightgreen;
+        }
+        form.ng-pristine{
+            background-color:lightblue;
+        }
+        form.ng-dirty{
+            background-color:lightgray;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+    <!-- <div ng-app="" ng-init="mySwitch=true">
+        <p>
+            <button ng-disable="mySwitch">Click </button>
+        </p>
+        <p>
+            <input type="checkbox" ng-model="mySwitch"/>Button
+        </p>
+        <p>
+            {{mySwitch}}
+        </p>
+    </div> -->
+    <!-- <div ng-app="myApp" ng-controller="myCtrl"> -->
+        <!-- <h1 ng-mousemove = "count = count+1">Mouse Over me</h1>
+        <button ng-click="click = click+1">CLick Me</button>
+        <button ng-click="myFunction()">Click Function</button>
+        <button ng-click="myFun()">Menu</button>
+        <h4>count = {{count}}, click = {{click}}, click function= {{clickfunction}}</h4> -->
+        
+        <!-- <div ng-show="showMe">
+            <h3>Menu:</h3>
+            <div>Pizza</div>
+            <div>Pasta</div>
+            <div>pesce</div>
+        </div>
+        <h3 ng-mousemove="myfun($event)">Mouse Over</h3>
+        <p>Coordinates:{{x + ","+y}}</p>
+        <form>
+            <input type="checkbox" ng-model="myVar1">
+            Select a topic:
+            <select ng-model="myVar">
+                <option value="">
+                <option value="dogs">Dogs
+                <option value="tuts">Tutorials
+                <option value="cars">Cars
+            </select>
+            
+        </form>
+        <div ng-switch="myVar">
+            <div ng-switch-when="dogs">
+               <h1>Dogs</h1>
+               <p>Welcome to a world of dogs.</p>
+            </div>
+            <div ng-switch-when="tuts">
+               <h1>Tutorials</h1>
+               <p>Learn from examples.</p>
+            </div>
+            <div ng-switch-when="cars">
+               <h1>Cars</h1>
+               <p>Read about cars.</p>
+            </div>
+        </div>
+        <form novalidate>
+            First Name: <br>
+            <input type="text" ng-model="user.firstname"><br>
+            Last Name: <br>
+            <input type="text" ng-model="user.lastname"><br><br>
+            <button ng-click="reset()">Reset</button>
+        </form>
+        <p>form = {{user}}</p>
+        <p>master ={{master}}</p> -->
+    <!-- </div> -->
+    <form name = "myForm">
+        Name: <br><input name="myName" ng-model="myName" required my-directive>
+        <h3>{{myForm.myName.$valid}}</h3>
+        <br>Email: <br><input name="myInput" ng-model="myInput" required my-directive>
+        <h3>{{myForm.myInput.$valid}}</h3>
+    </form>
+    
+   
+</body>
+</html>
